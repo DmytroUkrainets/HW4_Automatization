@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" procOnly="true">
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/src/main/java/org/example/processor/CompileTimeAnnotationProcessor.java" />
+        </processorPath>
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="main-app" />
+        <module name="annotation-processor" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="annotation-processor-example" target="1.8" />
+      <module name="own-annotation-processor" target="1.8" />
+      <module name="OwnAnnotations" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="OwnAnnotations" options="-proc:only" />
+      <module name="annotation-processor" options="" />
+      <module name="annotation-processor-example" options="-proc:only" />
+      <module name="own-annotation-processor" options="" />
+    </option>
+  </component>
+</project>
